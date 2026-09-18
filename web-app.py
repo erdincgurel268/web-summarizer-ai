@@ -29,7 +29,7 @@ if st.button("Özetle"):
             else:
                 with st.spinner("AI özetliyor..."):
                     genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-                    model = genai.GenerativeModel("gemini-2.0-flash")
+                    model = genai.GenerativeModel("gemini-3.6-flash")
                     prompt = f"Aşağıdaki web sitesi içeriğini 3-4 cümlede, Türkçe ve net şekilde özetle:\n\n{text}"
                     result = model.generate_content(prompt)
 
